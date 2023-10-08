@@ -1,0 +1,249 @@
+/* src/styles/menuItem.css */
+
+.menu-item-form, 
+.menu-item-list {
+    display: grid;
+    gap: 20px;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0px 4px 20px rgba(0,0,0,0.1);
+    background-color: #ffffff;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+    font-weight: 600;
+}
+
+input, textarea, select {
+    padding: 10px 15px;
+    border: 1px solid #d0d0d0;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 14px;
+    margin-bottom: 15px;
+    transition: border-color 0.3s;
+}
+
+.tabs, .menu-item-form button {
+    display: flex;
+    justify-content: center;
+}
+
+.tabs button, .menu-item-form button {
+    cursor: pointer;
+    background-color: #6c757d; /* A neutral grey */
+    color: #ffffff;
+    padding: 10px 20px; /* Increased padding for better visual appeal */
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin: 10px; /* Space between buttons */
+}
+
+.tabs button {
+    background-color: #28a745; /* A pleasant green */
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: #ffffff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button.selected {
+    background-color: #FFC107;  /* A pleasant yellow */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.menu-item-form button {
+    background-color: #007BFF; /* A modern blue */
+}
+
+/* Hover effects for the buttons */
+.tabs button:hover, .menu-item-form button:hover {
+    filter: brightness(0.9); /* Darken the button on hover */
+}
+
+.menu-management {
+    text-align: center;
+}
+
+.menu-tabs,
+.user-tabs, 
+.order-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.menu-tabs button.selected,
+.user-tabs button.selected,
+.order-tabs button.selected {
+    background-color: #FFC107;  /* Same yellow as before */
+}
+
+.feedback-message.success {
+    color: green;
+}
+
+.feedback-message.error {
+    color: red;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.popup.success {
+    border: 1px solid green;
+}
+
+.popup.error {
+    border: 1px solid red;
+}
+
+.all-menu-items {
+    margin: 20px 0;
+    text-align: left;
+    padding-left: 40px;
+}
+
+.category-section {
+    margin-bottom: 20px;
+}
+
+.category-section h3 {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.category-section ul {
+    list-style-type: none;
+    padding: 0;
+    padding-left: 0;
+}
+
+.menu-item-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-item-list ul li button {
+    margin-left: 10px; /* This will give some space between the item details and the button */
+}
+
+.success-message {
+    background-color: #DFF2BF;      /* Light green background color */
+    color: #4F8A10;                /* Dark green text color */
+    padding: 10px 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+    text-align: center;
+    border: 1px solid #4F8A10;     /* Dark green border */
+    font-weight: bold;             /* Bold text */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);  /* Slight shadow for depth */
+    transition: opacity 0.3s ease; /* Smooth fade-out */
+}
+
+/* TOGGLE button*/
+.switch {
+position: relative;
+display: inline-block;
+width: 60px;
+height: 34px;
+margin-right: 40px;
+}
+
+.switch input {
+display: none;
+}
+
+.slider {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #ccc;
+transition: 0.4s;
+}
+
+.slider:before {
+position: absolute;
+content: "";
+height: 26px;
+width: 26px;
+left: 4px;
+bottom: 4px;
+background-color: white;
+transition: 0.4s;
+}
+
+input:checked + .slider {
+background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+transform: translateX(26px);
+}
+
+.slider.round {
+border-radius: 34px;
+}
+
+.slider.round:before {
+border-radius: 50%;
+}
+  
+
+/* MODAL STYLES */
+.ReactModal__Overlay {
+    background-color: rgba(0, 0, 0, 0.75) !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ReactModal__Content {
+    width: 400px;
+    max-width: 90%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    outline: none;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}

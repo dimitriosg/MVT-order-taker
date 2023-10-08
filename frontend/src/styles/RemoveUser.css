@@ -1,0 +1,43 @@
+/* RemoveUser.css */
+
+.remove-user-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.remove-user-selects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 8cm; /* Sets the select width, which will also ensure that both selects have the same width */
+}
+
+/* Style for each label-select pair container */
+.remove-user-selects > div {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    width: 100%; 
+    margin-bottom: 15px; 
+}
+
+.remove-user-selects label {
+    width: 15%; 
+    text-align: right; 
+    padding-right: 10px; /* Space between label and select */
+    padding-bottom: 15px;
+}
+
+.remove-user-selects select {
+    width: 80%;
+    text-align: left;
+    box-sizing: border-box; /* This ensures padding and border are included in the element's total width and height */
+}
+
+.remove-user-container button {
+    width: 8cm;
+    align-self: center;
+}

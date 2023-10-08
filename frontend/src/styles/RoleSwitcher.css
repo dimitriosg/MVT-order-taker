@@ -1,0 +1,24 @@
+#revert-to-original-role-button {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+#revert-to-original-role-button:hover {
+    background-color: #e6ac00;  /* Slightly darker golden shade */
+    color: #fff;  /* White text color on hover for contrast */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+#role-switcher-dropdown{
+    width: '7cm';
+}
+
+#role-switcher-dropdown hr {
+    border-color: transparent;
+    opacity: 0;
+}
+
+#role-switcher-container{
+    margin: -20px 0 0 0;
+    padding: 0;
+}

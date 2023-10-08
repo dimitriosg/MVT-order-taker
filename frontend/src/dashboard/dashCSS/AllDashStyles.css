@@ -1,0 +1,82 @@
+/* src/dashboard/css/AllDashStyles.css */
+
+/* for BACK and LOGOUT buttons */
+.d-flex{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.dashboard-top-center {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure the button stays on top of other elements */
+}
+
+
+#logout-button {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#logout-button:hover {
+    background-color: #ff0000;
+}
+
+#logout-button-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f8f9fa; /* Bootstrap light background color */
+    border-bottom: 1px solid #dee2e6; /* Bootstrap border color */
+    padding: 10px;
+    z-index: 1000;
+}
+
+.back-button {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+}
+
+.dashboard-content {
+    margin-top: 250px; /* Adjust this value to provide enough space below the fixed logout button */
+}
+
+.welcome-msg-dash{
+    text-align: center;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #0d6efd;  /* Bootstrap's primary color */
+}
+
+.original-role-msg-dash{
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.selected-role-msg-dash{
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #0d6efd;  /* Bootstrap's primary color */
+}
+
+#custom-role-selector{
+    max-width: 5cm;
+}
+
+#error-message-switch-role{
+    bottom: 10px;
+}

@@ -1,0 +1,40 @@
+/* src/dashboard/css/WaiterDashboard.css */
+
+.waiter-dashboard {
+    padding: 20px;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+}
+/*
+.table-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+
+.table-box {
+    flex: 0 0 30%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.table-box:hover {
+    transform: translateY(-5px);
+}
+
+.table-box .table-number {
+    font-size: 24px;
+    font-weight: bold;
+}
+*/
+

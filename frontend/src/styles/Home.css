@@ -1,0 +1,47 @@
+/* /frontend/src/styles/Home.css */
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+  }
+  
+  .home-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .home-container p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    color: #555;
+  }
+  
+  .login-link {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #008CBA;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .login-link:hover {
+    background-color: #005f5f;
+  }
+
+
+  .home-title {
+    text-align: center;
+  }
+
+  .home-description {
+    text-align: center;
+  }

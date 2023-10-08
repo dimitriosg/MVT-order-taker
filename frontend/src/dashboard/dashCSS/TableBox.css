@@ -1,0 +1,40 @@
+/* src/dashboard/css/TableBox.css */
+
+.table-box {
+    border: 2px solid #333;
+    border-radius: 15px; /* Rounded corners */
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold; /* Bold text */
+    font-size: 1.5rem; /* Slightly bigger font size */
+    display: flex; /* To vertically center the text */
+    align-items: center; /* Vertically center */
+    justify-content: center; /* Horizontally center */
+    background: #2CA9D9; /* Default background to the first color */
+    color: white; /* Text color */
+}
+
+.table-box p {
+    margin: 0; /* Reset margin for the paragraph */
+}
+
+.table-box:hover {
+    background-color: #042A2B;
+    transform: translateY(-4px); /* Lift the table box a bit on hover for an interactive effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Increase the shadow on hover */
+}
+
+.tables-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 10px;
+    max-width: 330px;
+    margin: auto;
+}
+
+.table-box .table-number {
+    font-size: 24px;
+    font-weight: bold;
+}

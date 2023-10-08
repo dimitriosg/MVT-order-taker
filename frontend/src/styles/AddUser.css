@@ -1,0 +1,42 @@
+.add-user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#add-user-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 8cm; /* Sets the form width, which will also ensure that all inputs/selects have the same width */
+}
+
+/* Style for each label-input/select pair container */
+#add-user-form > div {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    width: 100%; 
+    margin-bottom: 15px; 
+}
+
+#add-user-form label {
+    width: 15%; 
+    text-align: right; 
+    padding-right: 10px; /* Space between label and input/select */
+    padding-bottom: 15px;
+}
+
+#add-user-form input,
+#add-user-form select {
+    width: 80%;
+    text-align: left;
+    box-sizing: border-box; /* This ensures padding and border are included in the element's total width and height */
+}
+
+.add-user button {
+    width: 8cm;
+    align-self: center;
+}

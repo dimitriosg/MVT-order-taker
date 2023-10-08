@@ -1,0 +1,12 @@
+.role-group {
+    margin-bottom: 40px;
+}
+
+h3 {
+    padding: 0 82px;
+}
+
+button:active {
+    transform: scale(0.95);  /* Slightly reduces the size to mimic a press effect */
+    transition: transform 0.1s;
+}

@@ -1,0 +1,102 @@
+.order-box {
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    padding: 15px;
+    width: 300px; /* adjust as per your need */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 15px 0;
+}
+
+.order-box h2 {
+    background-color: #2CA9D9;
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: #fff;
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.order-box ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.order-box ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+}
+
+.order-box ul li:last-child {
+    border-bottom: none;
+}
+
+.order-box ul li span.item-name {
+    font-weight: bold;
+}
+
+.order-box ul li span.item-status {
+    background-color: #FA6900;
+    padding: 5px 10px;
+    border-radius: 8px;
+    color: #fff;
+}
+
+.order-item {
+    margin-top: -20px;
+    margin-bottom: 0px;
+}
+
+.order-item.no-border {
+    border: none;
+    margin-bottom: 0;
+}
+
+.order-total {
+  font-size: 20px; /* Adjust the value as desired */
+}
+
+.table-total {
+  font-size: 30px; /* Adjust the value as desired */
+}
+
+.item-status{
+    font-size: 1.0rem;
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.order-header hr {
+  border: none;
+  height: 3px;
+  background-color: blue;
+}
+
+#order-divider {
+    height: 5px;
+    background-color: green !important;
+    position: relative;
+    overflow: hidden;
+}
+
+#order-divider::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    animation: ticker-order-divider 10s infinite;
+}
+
+@keyframes ticker-order-divider {
+    from {
+      left: -100%;
+    }
+    to {
+      left: 100%;
+    }
+}

@@ -1,0 +1,51 @@
+/* src/dashboard/css/DeveloperDashboard.css */
+
+.developer-dashboard {
+    padding: 20px;
+    background-color: #f0f0f0;
+    min-height: 100vh;
+}
+
+.header {
+    background-color: #2c3e50;
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.tools-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.tool-button {
+    flex: 0 0 30%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #3498db;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.tool-button:hover {
+    background-color: #2980b9;
+}
+
+.logout-button {
+    padding: 10px 20px;
+    background-color: #e74c3c;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.logout-button:hover {
+    background-color: #c0392b;
+}

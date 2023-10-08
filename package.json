@@ -1,0 +1,13 @@
+{
+    "name": "mvt-order-taker",
+    "version": "1.0.0",
+    "scripts": {
+      "start": "cd backend && npm start",
+      "heroku-postbuild": "cd frontend && npm install && npm run build"
+    },
+    "engines": {
+        "node": ">=16.0.0",
+        "npm": ">=7.0.0"
+    }
+  }
+  

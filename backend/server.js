@@ -69,6 +69,7 @@ const __dirname = dirname(__filename);
 
 // Serve static files from the React app
 app.use(express.static(join(__dirname, '../frontend/build')));
+console.log("Sending file from:", join(__dirname, '../frontend/build/index.html'));
 
 // The "catchall" handler: for any request that doesn't match one above, send back React's index.html file.
 if (process.env.NODE_ENV === 'production') {
@@ -77,6 +78,11 @@ if (process.env.NODE_ENV === 'production') {
     res.sendFile(join(__dirname, '../frontend/build/index.html'));
   });
 }
+
+app.get('*', (req, res) => {
+  console.log('Catch-all route hit.');
+  res.sendFile(join(__dirname, '../frontend/build/index.html'));
+});
 
 // Error handling middleware
 app.use((err, req, res, next) => {

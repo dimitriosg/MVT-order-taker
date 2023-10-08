@@ -55,6 +55,7 @@ const RoleSwitcher = () => {
         const fetchRoles = async () =>{
             try {
                 const response = await api.get('/api/users/roles');
+                console.log('API response:', response.data);
                 setRoles(response.data);
             } catch (error) {
                 console.error('Error fetching roles:', error);
@@ -146,7 +147,7 @@ const RoleSwitcher = () => {
                     id="custom-width-role-selector"
                 >
                     <option value="" disabled>Select role</option>
-                    {roles.map((role, index) => (
+                    {Array.isArray(roles) && roles.map((role, index) => (
                         <option key={index} value={role}>{role}</option>
                     ))}
                 </select>

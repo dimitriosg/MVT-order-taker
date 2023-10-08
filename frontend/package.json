@@ -33,10 +33,11 @@
     "webpack-dev-server": "^4.15.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "heroku-postbuild": "cd frontend && npm install && npm run build",
+    "dev": "concurrently \"cd frontend && npm start\" \"npm start\"",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

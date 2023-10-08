@@ -1,4 +1,4 @@
-// server.js
+// backend/server.js
 import express from 'express';
 import cors from 'cors';
 import { createServer } from 'http';
@@ -13,7 +13,7 @@ const app = express();
 const corsOptions = {
   origin: [
     'http://localhost:3000',
-    'https://order-taker-front-8e7edf8fac75.herokuapp.com'
+    'https://order-taker-front-8e7edf8fac75.herokuapp.com' // to be updated
   ],  // Allow both your local and deployed frontends
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true,

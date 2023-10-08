@@ -1,6 +1,7 @@
 // backend/server.js
 import express from 'express';
 import cors from 'cors';
+import path from 'path';
 import { createServer } from 'http';
 import { Server } from 'socket.io';
 import { join, dirname } from 'path';
@@ -10,16 +11,28 @@ import multerRoutes from './middleware/multer.js';
 
 const app = express();
 
+// Manual CORS Middleware
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*"); // Update this to match your allowed origins
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
+  if (req.method === 'OPTIONS') {
+    res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+    return res.status(200).json({});
+  }
+  next();
+});
+
 const corsOptions = {
   origin: [
     'http://localhost:3000',
     'http://localhost:5000',
-    'https://order-taker-front-8e7edf8fac75.herokuapp.com',
     'https://mvt-order-taker-027623a22a27.herokuapp.com/'
   ],  // Allow both your local and deployed frontends
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true,
   optionsSuccessStatus: 204,
+  exposedHeaders: ['Content-Length', 'X-Foo', 'X-Bar'],
+  allowedHeaders: '*',
 };
 
 app.use(cors(corsOptions)); // Set up CORS
@@ -55,15 +68,21 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 // Serve static files from the React app
-app.use(express.static(join(__dirname, 'frontend/build')));
+app.use(express.static(join(__dirname, '../frontend/build')));
 
 // The "catchall" handler: for any request that doesn't match one above, send back React's index.html file.
 if (process.env.NODE_ENV === 'production') {
   // Only use the catchall handler in production
   app.get('*', (req, res) => {
-    res.sendFile(join(__dirname, 'frontend/build/index.html'));
+    res.sendFile(join(__dirname, '../frontend/build/index.html'));
   });
 }
+
+// Error handling middleware
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send({ error: 'Server Error', message: err.message });
+});
 
 // Handle unhandled promise rejections
 process.on('unhandledRejection', (reason, promise) => {

@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: "https://order-taker-back-5416a0177bda.herokuapp.com",
+  baseURL: process.env.REACT_APP_API_BASE_URL || "/api",
 });
 
 export default api;

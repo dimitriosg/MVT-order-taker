@@ -55,7 +55,7 @@ const RoleSwitcher = () => {
         const fetchRoles = async () =>{
             try {
                 const response = await api.get('/api/users/roles');
-                console.log('API response:', response.data);
+                console.log('API response fetchRoles:', response.data);
                 setRoles(response.data);
             } catch (error) {
                 console.error('Error fetching roles:', error);
